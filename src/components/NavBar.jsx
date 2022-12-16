@@ -3,14 +3,21 @@ import {
   useAuthState,
   useSignOut,
 } from "react-firebase-hooks/auth";
+import { useNavigate } from "react-router-dom";
 import * as fire from "../fire";
 
-export const BrandName = () => (
-  <div className="text-xl btn btn-ghost normal-case">
-    <span className="tracking-widest font-light">Lucila</span>
-    <span className="font-bold">App</span>
-  </div>
-);
+export const BrandName = () => {
+  const navigate = useNavigate();
+  return (
+    <button
+      onClick={() => navigate("/")}
+      className="text-xl btn btn-ghost normal-case"
+    >
+      <span className="tracking-widest font-light">Lucila</span>
+      <span className="font-bold">App</span>
+    </button>
+  );
+};
 
 export const UserMenu = ({ user, logout }) => {
   return (

@@ -5,14 +5,15 @@ import Landing from "./components/Landing";
 
 export default () => {
   return (
-    <div className="" data-theme="cupcake">
-      <div className="h-screen snap-y snap-mandatory overflow-y-scroll scrollbar-hide">
-        <Nav />
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/appointments" element={<Appointments />} />
-        </Routes>
-      </div>
+    <div
+      data-theme="cupcake"
+      className="flex flex-col h-screen w-screen snap-y snap-mandatory overflow-y-scroll scrollbar-hide"
+    >
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/get" element={<Appointments />} />
+      </Routes>
     </div>
   );
 };
