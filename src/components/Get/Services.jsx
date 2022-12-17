@@ -65,7 +65,7 @@ const ServiceList = ({
                   <button
                     className="btn btn-primary btn-sm"
                     onClick={() =>
-                      next(0, {
+                      next({
                         payment_type: "full_price",
                         service_id: service.id,
                         amount: full_price,
