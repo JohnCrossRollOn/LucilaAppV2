@@ -7,7 +7,7 @@ export const Snap = ({ children }) => (
 export const Jumbotron = () => {
   const navigate = useNavigate();
   return (
-    <div className="hero-content flex-col lg:flex-row">
+    <div className="hero-content flex-col lg:flex-row lg:gap-16">
       <img
         src="https://th.bing.com/th/id/OIP.XlfldlLBvuw1jqf2R255QAHaDz?pid=ImgDet&rs=1"
         className="rounded-lg shadow-lg"
