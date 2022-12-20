@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import Services from "./Services";
+import Appointments from "./Appointments";
 import { isAdmin } from "../utils";
 
 const Step = ({ currentStep, steps, goTo, className }) =>
@@ -78,7 +79,7 @@ export default () => {
                   <h6 className="text-sm font-light">Es posible señar.</h6>
                 </div>
               )}
-              <Services {...{ next }} />
+              <Services next={next} />
             </>,
             <>
               {isAdmin() ? (
@@ -89,6 +90,7 @@ export default () => {
                   <h6 className="text-sm font-light">Saque turno.</h6>
                 </div>
               )}
+              <Appointments next={next} />
             </>,
             <>
               {isAdmin() ? (
